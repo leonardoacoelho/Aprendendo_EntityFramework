@@ -45,9 +45,7 @@
     <Compile Include="ProdutoBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logicas de Negocio\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AprendendoEF.DAL\AprendendoEF.DAL.csproj">
       <Project>{bf46d76f-2367-4933-a51f-96e8dc12c5f9}</Project>

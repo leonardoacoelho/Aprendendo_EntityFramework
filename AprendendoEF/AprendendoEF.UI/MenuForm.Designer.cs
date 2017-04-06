@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuClientes});
+            this.menuClientes,
+            this.menuProdutos});
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -62,9 +64,17 @@
             this.menuClientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.menuClientes.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(130, 24);
+            this.menuClientes.Size = new System.Drawing.Size(152, 24);
             this.menuClientes.Text = "&Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
+            // 
+            // menuProdutos
+            // 
+            this.menuProdutos.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.menuProdutos.Name = "menuProdutos";
+            this.menuProdutos.Size = new System.Drawing.Size(152, 24);
+            this.menuProdutos.Text = "&Produtos";
+            this.menuProdutos.Click += new System.EventHandler(this.menuProdutos_Click);
             // 
             // menuSair
             // 
@@ -72,8 +82,9 @@
             this.menuSair.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.menuSair.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuSair.Name = "menuSair";
+            this.menuSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.menuSair.Size = new System.Drawing.Size(47, 23);
-            this.menuSair.Text = "Sai&r";
+            this.menuSair.Text = "Sair";
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // MenuForm
@@ -101,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
         private System.Windows.Forms.ToolStripMenuItem menuSair;
+        private System.Windows.Forms.ToolStripMenuItem menuProdutos;
     }
 }

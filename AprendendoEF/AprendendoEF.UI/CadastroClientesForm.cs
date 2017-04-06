@@ -111,10 +111,13 @@ namespace AprendendoEF.UI
 
                 if (id > 0)
                 {
-                    var result = MessageBox.Show($"Você tem certeza que deseja remover {_cliente.Nome}?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    var result = MessageBox.Show($"Você tem certeza que deseja remover {_cliente.Nome}?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                     if (result == DialogResult.Yes)
                     {
                         bo.Remover(id);
+
+                        MessageBox.Show("Removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LimparCampos();
 

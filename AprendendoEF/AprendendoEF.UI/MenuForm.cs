@@ -30,5 +30,14 @@ namespace AprendendoEF.UI
         {
             Application.Exit();
         }
+
+        private void menuProdutos_Click(object sender, EventArgs e)
+        {
+            var form = new ListaProdutosForm(this)
+            {
+                MdiParent = this,
+            };
+            form.Show();
+        }
     }
 }
