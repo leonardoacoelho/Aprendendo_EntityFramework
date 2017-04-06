@@ -9,43 +9,52 @@ namespace AprendendoEF.DAL
 {
     public class ClienteDAO
     {
-        DataContext _context;
-
-        public ClienteDAO()
-        {
-            _context = new DataContext();
-        }
-
         public List<Cliente> Listar()
         {
-            return _context.Clientes.ToList();
+            //Quando passa pela ultima chave mata o objeto, limpa a memoria
+            using (var _context = new DataContext())
+            {
+                return _context.Clientes.ToList();
+            }
         }
 
         public Cliente Encontrar(int id)
         {
-            return _context.Clientes.FirstOrDefault(cliente => cliente.ClienteId == id);
+            using (var _context = new DataContext())
+            {
+                return _context.Clientes.FirstOrDefault(x => x.ClienteId == id);
+            }
         }
 
         public void Inserir(Cliente cliente)
         {
-            _context.Clientes.Add(cliente);
-            _context.SaveChanges();
+            using (var _context = new DataContext())
+            {
+                _context.Clientes.Add(cliente);
+                _context.SaveChanges();
+            }
         }
 
         public void Editar(Cliente cliente)
         {
-            _context.Clientes.Attach(cliente);
-            _context.Entry(cliente).State = EntityState.Modified;
-            _context.SaveChanges();
+            using (var _context = new DataContext())
+            {
+                _context.Clientes.Attach(cliente);
+                _context.Entry(cliente).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
         }
 
         public void Remover(int id)
         {
-            var cliente = Encontrar(id);
+            using (var _context = new DataContext())
+            {
+                var cliente = Encontrar(id);
 
-            _context.Clientes.Attach(cliente);
-            _context.Clientes.Remove(cliente);
-            _context.SaveChanges();
+                _context.Clientes.Attach(cliente);
+                _context.Clientes.Remove(cliente);
+                _context.SaveChanges();
+            }
         }
     }
 }
