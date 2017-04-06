@@ -50,7 +50,7 @@ namespace AprendendoEF.BLL
                 if ((string.IsNullOrEmpty(cliente.Nome)) || (string.IsNullOrEmpty(cliente.Email)))
                     throw new ArgumentNullException();
 
-                if (cliente.ClienteId == 0)
+                if (cliente.Id == 0)
                     Inserir(cliente);
                 else
                     Editar(cliente);

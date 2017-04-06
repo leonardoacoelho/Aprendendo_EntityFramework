@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF
 {
-    public class Cliente : BaseEntidade
+    public class Produto : BaseEntidade
     {
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
 
-        public string Sobrenome { get; set; }
-
-        public string Email { get; set; }
+        public double Valor { get; set; }
     }
 }

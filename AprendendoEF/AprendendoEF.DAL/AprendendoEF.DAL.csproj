@@ -58,6 +58,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,13 +67,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
-    <Compile Include="DataContext.cs" />
+    <Compile Include="Context\DataContext.cs" />
+    <Compile Include="Migrations\201704041422453_InitialCreate.cs" />
+    <Compile Include="Migrations\201704041422453_InitialCreate.Designer.cs">
+      <DependentUpon>201704041422453_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704061220535_Add_Sobrenome_In_Cliente.cs" />
+    <Compile Include="Migrations\201704061220535_Add_Sobrenome_In_Cliente.Designer.cs">
+      <DependentUpon>201704061220535_Add_Sobrenome_In_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704061643576_Add_Produto.cs" />
+    <Compile Include="Migrations\201704061643576_Add_Produto.Designer.cs">
+      <DependentUpon>201704061643576_Add_Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProdutoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Acesso a Dados\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AprendendoEF\AprendendoEF.csproj">
       <Project>{43b2baa1-22b9-41dd-ba8e-dce4895a9fe3}</Project>
@@ -103,6 +117,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704041422453_InitialCreate.resx">
+      <DependentUpon>201704041422453_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061220535_Add_Sobrenome_In_Cliente.resx">
+      <DependentUpon>201704061220535_Add_Sobrenome_In_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061643576_Add_Produto.resx">
+      <DependentUpon>201704061643576_Add_Produto.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

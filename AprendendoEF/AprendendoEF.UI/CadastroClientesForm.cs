@@ -47,15 +47,17 @@ namespace AprendendoEF.UI
             txtId.Text = "";
             txtNome.Text = "";
             txtEmail.Text = "";
+            txtSobrenome.Text = "";
         }
 
         private void CadastroClientesForm_Load(object sender, EventArgs e)
         {
             if (_cliente != null)
             {
-                txtId.Text = _cliente.ClienteId.ToString();
+                txtId.Text = _cliente.Id.ToString();
                 txtNome.Text = _cliente.Nome;
                 txtEmail.Text = _cliente.Email;
+                txtSobrenome.Text = _cliente.Sobrenome;
 
                 menuRemover.Visible = true;
             }
@@ -69,9 +71,10 @@ namespace AprendendoEF.UI
             {
                 _cliente = new Cliente
                 {
-                    ClienteId = ObterId(),
+                    Id = ObterId(),
                     Nome = txtNome.Text,
-                    Email = txtEmail.Text
+                    Email = txtEmail.Text,
+                    Sobrenome = txtSobrenome.Text
                 };
 
                 bo.Salvar(_cliente);
