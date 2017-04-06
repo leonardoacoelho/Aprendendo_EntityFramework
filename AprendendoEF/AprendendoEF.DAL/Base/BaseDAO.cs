@@ -1,4 +1,5 @@
 ﻿using AprendendoEF.DAL.Context;
+using AprendendoEF.DAL.Interfaces;
 using AprendendoEF.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF.DAL.Base
 {
-    public class BaseDAO<T> where T : class, IBaseEntidade
+    public class BaseDAO<T> : IBaseDAO<T> where T : class, IBaseEntidade
     {
         public virtual List<T> Listar()
         {

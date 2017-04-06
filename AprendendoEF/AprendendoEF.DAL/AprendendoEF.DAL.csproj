@@ -70,6 +70,7 @@
     <Compile Include="Base\BaseDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Context\DataContext.cs" />
+    <Compile Include="Interfaces\IBaseDAO.cs" />
     <Compile Include="Migrations\201704041422453_InitialCreate.cs" />
     <Compile Include="Migrations\201704041422453_InitialCreate.Designer.cs">
       <DependentUpon>201704041422453_InitialCreate.cs</DependentUpon>

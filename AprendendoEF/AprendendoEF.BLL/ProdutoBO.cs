@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF.BLL
 {
-    public class ClienteBO : BaseBO<Cliente>
+    public class ProdutoBO : BaseBO<Produto>
     {
-        public override void Salvar(Cliente entidade)
+        public override void Salvar(Produto entidade)
         {
             try
             {
-                if ((string.IsNullOrEmpty(entidade.Nome)) || (string.IsNullOrEmpty(entidade.Email)))
+                if (string.IsNullOrEmpty(entidade.Descricao))
                     throw new ArgumentNullException();
+
+                if (entidade.Valor <= 0)
+                    throw new ArgumentOutOfRangeException();
 
                 base.Salvar(entidade);
             }
