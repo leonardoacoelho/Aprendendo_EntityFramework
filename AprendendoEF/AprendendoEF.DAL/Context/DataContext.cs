@@ -17,10 +17,12 @@ namespace AprendendoEF.DAL.Context
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes");
             modelBuilder.Entity<Produto>().ToTable("Produtos");
+            modelBuilder.Entity<GrupoProduto>().ToTable("GruposProdutos");
         }
 
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Produto> Produtos { get; set; }
+        public virtual DbSet<GrupoProduto> GruposProdutos { get; set; }
 
     }
 }

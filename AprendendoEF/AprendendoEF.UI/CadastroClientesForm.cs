@@ -1,4 +1,5 @@
 ﻿using AprendendoEF.BLL;
+using AprendendoEF.UI.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AprendendoEF.UI
 {
-    public partial class CadastroClientesForm : Form
+    public partial class CadastroClientesForm : BaseForm
     {
         Cliente _cliente;
 
@@ -19,15 +20,10 @@ namespace AprendendoEF.UI
 
         ClienteBO bo;
 
-        public CadastroClientesForm()
+        public CadastroClientesForm(ListaClientesForm lista) : base(lista)
         {
             InitializeComponent();
-
             bo = new ClienteBO();
-        }
-
-        public CadastroClientesForm(ListaClientesForm lista) : this()
-        {
             _lista = lista;
         }
 

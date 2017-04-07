@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseEntidade.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="GrupoProduto.cs" />
     <Compile Include="Interfaces\IBaseEntidade.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

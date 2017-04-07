@@ -1,4 +1,5 @@
 ﻿using AprendendoEF.BLL;
+using AprendendoEF.UI.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AprendendoEF.UI
 {
-    public partial class CadastroProdutoForm : Form
+    public partial class CadastroProdutoForm : BaseForm
     {
         Produto _produto;
 
@@ -19,15 +20,10 @@ namespace AprendendoEF.UI
 
         ProdutoBO bo;
 
-        public CadastroProdutoForm()
+        public CadastroProdutoForm(ListaProdutosForm lista) : base(lista)
         {
             InitializeComponent();
-
             bo = new ProdutoBO();
-        }
-
-        public CadastroProdutoForm(ListaProdutosForm lista) : this()
-        {
             _lista = lista;
         }
 
@@ -127,9 +123,7 @@ namespace AprendendoEF.UI
                         MessageBox.Show("Removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LimparCampos();
-
                         _lista.AtualizaGrid();
-
                         Hide();
                     }
                 }

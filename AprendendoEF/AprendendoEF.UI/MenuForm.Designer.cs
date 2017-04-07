@@ -33,6 +33,7 @@
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuClientes,
-            this.menuProdutos});
+            this.menuProdutos,
+            this.gruposDeProdutosToolStripMenuItem});
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -64,7 +66,7 @@
             this.menuClientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.menuClientes.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(152, 24);
+            this.menuClientes.Size = new System.Drawing.Size(212, 24);
             this.menuClientes.Text = "&Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
@@ -72,7 +74,7 @@
             // 
             this.menuProdutos.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuProdutos.Name = "menuProdutos";
-            this.menuProdutos.Size = new System.Drawing.Size(152, 24);
+            this.menuProdutos.Size = new System.Drawing.Size(212, 24);
             this.menuProdutos.Text = "&Produtos";
             this.menuProdutos.Click += new System.EventHandler(this.menuProdutos_Click);
             // 
@@ -86,6 +88,14 @@
             this.menuSair.Size = new System.Drawing.Size(47, 23);
             this.menuSair.Text = "Sair";
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
+            // 
+            // gruposDeProdutosToolStripMenuItem
+            // 
+            this.gruposDeProdutosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.gruposDeProdutosToolStripMenuItem.Name = "gruposDeProdutosToolStripMenuItem";
+            this.gruposDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.gruposDeProdutosToolStripMenuItem.Text = "&Grupos de Produtos";
+            this.gruposDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.gruposDeProdutosToolStripMenuItem_Click);
             // 
             // MenuForm
             // 
@@ -113,5 +123,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
         private System.Windows.Forms.ToolStripMenuItem menuSair;
         private System.Windows.Forms.ToolStripMenuItem menuProdutos;
+        private System.Windows.Forms.ToolStripMenuItem gruposDeProdutosToolStripMenuItem;
     }
 }

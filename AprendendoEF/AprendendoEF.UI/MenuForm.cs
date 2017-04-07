@@ -19,10 +19,7 @@ namespace AprendendoEF.UI
 
         private void menuClientes_Click(object sender, EventArgs e)
         {
-            var form = new ListaClientesForm(this)
-            {
-                MdiParent = this,
-            };
+            var form = new ListaClientesForm(this);
             form.Show();
         }
 
@@ -33,10 +30,13 @@ namespace AprendendoEF.UI
 
         private void menuProdutos_Click(object sender, EventArgs e)
         {
-            var form = new ListaProdutosForm(this)
-            {
-                MdiParent = this,
-            };
+            var form = new ListaProdutosForm(this);
+            form.Show();
+        }
+
+        private void gruposDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new ListaGruposProdutos(this);
             form.Show();
         }
     }

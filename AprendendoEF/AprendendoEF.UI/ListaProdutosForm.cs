@@ -1,4 +1,5 @@
 ﻿using AprendendoEF.BLL;
+using AprendendoEF.UI.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,30 +12,20 @@ using System.Windows.Forms;
 
 namespace AprendendoEF.UI
 {
-    public partial class ListaProdutosForm : Form
+    public partial class ListaProdutosForm : BaseForm
     {
         ProdutoBO bo;
-
-        MenuForm _menu;
-
-        public ListaProdutosForm()
+        
+        public ListaProdutosForm(MenuForm menu) : base(menu)
         {
             InitializeComponent();
 
             bo = new ProdutoBO();
         }
 
-        public ListaProdutosForm(MenuForm menu) : this()
-        {
-            _menu = menu;
-        }
-
         private void menuNovo_Click(object sender, EventArgs e)
         {
-            var form = new CadastroProdutoForm(this)
-            {
-                MdiParent = _menu
-            };
+            var form = new CadastroProdutoForm(this);
 
             form.Show();
         }
@@ -67,15 +58,11 @@ namespace AprendendoEF.UI
 
                     if(produto == null)
                     {
-                        MessageBox.Show("Cliente não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Produto não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        var form = new CadastroProdutoForm(this, produto)
-                        {
-                            MdiParent = _menu
-                        };
-                        
+                        var form = new CadastroProdutoForm(this, produto);
                         form.Show();
                     }
                 }

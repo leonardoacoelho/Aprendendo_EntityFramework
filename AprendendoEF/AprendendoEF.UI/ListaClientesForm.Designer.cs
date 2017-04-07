@@ -51,7 +51,7 @@
             this.dgvClientes.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
             this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -74,7 +74,6 @@
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 41;
             // 
             // Column2
             // 
@@ -82,7 +81,6 @@
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 60;
             // 
             // sobrenome
             // 
@@ -90,7 +88,6 @@
             this.sobrenome.HeaderText = "Sobrenome";
             this.sobrenome.Name = "sobrenome";
             this.sobrenome.ReadOnly = true;
-            this.sobrenome.Width = 86;
             // 
             // Column3
             // 
@@ -98,7 +95,6 @@
             this.Column3.HeaderText = "E-Mail";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
             // 
             // toolStripContainer1
             // 

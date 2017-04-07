@@ -48,7 +48,7 @@
             this.menuCancelar});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(85, 413);
+            this.menuStrip1.Size = new System.Drawing.Size(98, 413);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,7 +59,7 @@
             this.menuNovo.Image = global::AprendendoEF.UI.Properties.Resources.add;
             this.menuNovo.Name = "menuNovo";
             this.menuNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuNovo.Size = new System.Drawing.Size(72, 23);
+            this.menuNovo.Size = new System.Drawing.Size(85, 23);
             this.menuNovo.Text = "NOVO";
             this.menuNovo.Click += new System.EventHandler(this.menuNovo_Click);
             // 
@@ -67,7 +67,7 @@
             // 
             this.menuCancelar.Name = "menuCancelar";
             this.menuCancelar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.menuCancelar.Size = new System.Drawing.Size(72, 19);
+            this.menuCancelar.Size = new System.Drawing.Size(85, 19);
             this.menuCancelar.Text = "Cancelar";
             this.menuCancelar.Visible = false;
             this.menuCancelar.Click += new System.EventHandler(this.menuCancelar_Click);
@@ -87,10 +87,10 @@
             this.Descricao,
             this.Valor});
             this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProdutos.Location = new System.Drawing.Point(85, 0);
+            this.dgvProdutos.Location = new System.Drawing.Point(98, 0);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.Size = new System.Drawing.Size(714, 413);
+            this.dgvProdutos.Size = new System.Drawing.Size(701, 413);
             this.dgvProdutos.TabIndex = 1;
             this.dgvProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellDoubleClick);
             // 

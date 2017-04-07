@@ -55,11 +55,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CadastroClientesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastroClientesForm.Designer.cs">
       <DependentUpon>CadastroClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroGruposProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroGruposProdutos.Designer.cs">
+      <DependentUpon>CadastroGruposProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroProdutoForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +81,12 @@
     </Compile>
     <Compile Include="ListaClientesForm.Designer.cs">
       <DependentUpon>ListaClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaGruposProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaGruposProdutos.Designer.cs">
+      <DependentUpon>ListaGruposProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaProdutosForm.cs">
       <SubType>Form</SubType>
@@ -90,11 +105,17 @@
     <EmbeddedResource Include="CadastroClientesForm.resx">
       <DependentUpon>CadastroClientesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroGruposProdutos.resx">
+      <DependentUpon>CadastroGruposProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroProdutoForm.resx">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaClientesForm.resx">
       <DependentUpon>ListaClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaGruposProdutos.resx">
+      <DependentUpon>ListaGruposProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaProdutosForm.resx">
       <DependentUpon>ListaProdutosForm.cs</DependentUpon>
@@ -148,6 +169,7 @@
   <ItemGroup>
     <None Include="Resources\delete.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
