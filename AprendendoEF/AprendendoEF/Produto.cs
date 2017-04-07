@@ -1,9 +1,4 @@
 ﻿using AprendendoEF.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AprendendoEF
 {
@@ -12,5 +7,9 @@ namespace AprendendoEF
         public string Descricao { get; set; }
 
         public double Valor { get; set; }
+
+        public GrupoProduto GrupoProduto { get; set; }
+
+        public int GrupoProduto_Id { get; set; }
     }
 }

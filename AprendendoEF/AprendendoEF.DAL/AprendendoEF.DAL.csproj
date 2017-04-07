@@ -69,6 +69,9 @@
   <ItemGroup>
     <Compile Include="Base\BaseDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="Configurations\ClienteConfig.cs" />
+    <Compile Include="Configurations\GrupoProdutoConfig.cs" />
+    <Compile Include="Configurations\ProdutoConfig.cs" />
     <Compile Include="Context\DataContext.cs" />
     <Compile Include="GrupoProdutoDAO.cs" />
     <Compile Include="Interfaces\IBaseDAO.cs" />
@@ -87,6 +90,14 @@
     <Compile Include="Migrations\201704062057043_Add_GrupoProduto.cs" />
     <Compile Include="Migrations\201704062057043_Add_GrupoProduto.Designer.cs">
       <DependentUpon>201704062057043_Add_GrupoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071435435_Add_Grupo_Produto_in_Produto.cs" />
+    <Compile Include="Migrations\201704071435435_Add_Grupo_Produto_in_Produto.Designer.cs">
+      <DependentUpon>201704071435435_Add_Grupo_Produto_in_Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071747170_Add_ForeignKey_GrupoProduto_In_Produto.cs" />
+    <Compile Include="Migrations\201704071747170_Add_ForeignKey_GrupoProduto_In_Produto.Designer.cs">
+      <DependentUpon>201704071747170_Add_ForeignKey_GrupoProduto_In_Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProdutoDAO.cs" />
@@ -136,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704062057043_Add_GrupoProduto.resx">
       <DependentUpon>201704062057043_Add_GrupoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071435435_Add_Grupo_Produto_in_Produto.resx">
+      <DependentUpon>201704071435435_Add_Grupo_Produto_in_Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071747170_Add_ForeignKey_GrupoProduto_In_Produto.resx">
+      <DependentUpon>201704071747170_Add_ForeignKey_GrupoProduto_In_Produto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

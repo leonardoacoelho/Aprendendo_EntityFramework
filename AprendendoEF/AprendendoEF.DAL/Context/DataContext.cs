@@ -1,8 +1,7 @@
 namespace AprendendoEF.DAL.Context
 {
-    using System;
+    using Configurations;
     using System.Data.Entity;
-    using System.Linq;
 
     public class DataContext : DbContext
     {
@@ -15,9 +14,9 @@ namespace AprendendoEF.DAL.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Cliente>().ToTable("Clientes");
-            modelBuilder.Entity<Produto>().ToTable("Produtos");
-            modelBuilder.Entity<GrupoProduto>().ToTable("GruposProdutos");
+            modelBuilder.Configurations.Add(new ClienteConfig());
+            modelBuilder.Configurations.Add(new ProdutoConfig());
+            modelBuilder.Configurations.Add(new GrupoProdutoConfig());
         }
 
         public virtual DbSet<Cliente> Clientes { get; set; }

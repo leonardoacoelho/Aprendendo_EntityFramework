@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF.BLL
 {
-    public class ProdutoBO : BaseBO<Produto>
+    public class ProdutoBO : BaseBO<Produto, ProdutoDAO>
     {
         public override void Salvar(Produto entidade)
         {
@@ -19,6 +19,10 @@ namespace AprendendoEF.BLL
 
                 if (entidade.Valor <= 0)
                     throw new ArgumentOutOfRangeException();
+
+                //Ajustar foreignkey
+                entidade.GrupoProduto_Id = entidade.GrupoProduto.Id;
+                entidade.GrupoProduto = null;
 
                 base.Salvar(entidade);
             }

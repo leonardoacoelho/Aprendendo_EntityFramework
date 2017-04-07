@@ -1,22 +1,19 @@
-﻿using AprendendoEF.DAL.Base;
-using AprendendoEF.DAL.Interfaces;
+﻿using AprendendoEF.DAL.Interfaces;
 using AprendendoEF.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AprendendoEF.BLL.Base
 {
-    public class BaseBO<T> 
+    public class BaseBO<T, TDAO> 
         where T : class, IBaseEntidade 
+        where TDAO : class, IBaseDAO<T>, new()
     {
-        BaseDAO<T> dao;
+        TDAO dao;
 
         public BaseBO()
         {
-            dao = new BaseDAO<T>();
+            dao = new TDAO();
         }
 
         protected virtual void Inserir(T entidade)

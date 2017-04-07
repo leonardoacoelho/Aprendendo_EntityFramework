@@ -20,6 +20,7 @@ namespace AprendendoEF.UI
 
         ProdutoBO bo;
 
+
         public CadastroProdutoForm(ListaProdutosForm lista) : base(lista)
         {
             InitializeComponent();
@@ -34,10 +35,15 @@ namespace AprendendoEF.UI
 
         private void CadastroProdutoForm_Load(object sender, EventArgs e)
         {
+            var grupoBO = new GrupoProdutoBO();
+            var grupos = grupoBO.Listar();
+            cbxGrupo.DataSource = grupos;
+
             if (_produto != null)
             {
                 txtId.Text = _produto.Id.ToString();
                 txtDescricao.Text = _produto.Descricao;
+                cbxGrupo.SelectedIndex = grupos.IndexOf(grupos.FirstOrDefault(x=>x.Id == _produto.GrupoProduto_Id));
                 txtValor.Text = _produto.Valor.ToString();
 
                 menuRemover.Visible = true;
@@ -54,6 +60,7 @@ namespace AprendendoEF.UI
                 {
                     Id = ObterId(),
                     Descricao = txtDescricao.Text,
+                    GrupoProduto = (GrupoProduto)cbxGrupo.SelectedItem,
                     Valor = Convert.ToDouble(txtValor.Text)
                 };
 
@@ -92,6 +99,7 @@ namespace AprendendoEF.UI
         {
             txtId.Text = "";
             txtDescricao.Text = "";
+            cbxGrupo.SelectedIndex = -1;
             txtValor.Text = "";
         }
 

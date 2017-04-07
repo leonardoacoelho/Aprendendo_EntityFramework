@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF.BLL
 {
-    public class ClienteBO : BaseBO<Cliente>
+    public class ClienteBO : BaseBO<Cliente, ClienteDAO>
     {
         public override void Salvar(Cliente entidade)
         {

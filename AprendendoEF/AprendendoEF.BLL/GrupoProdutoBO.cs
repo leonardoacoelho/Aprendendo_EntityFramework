@@ -1,4 +1,5 @@
 ﻿using AprendendoEF.BLL.Base;
+using AprendendoEF.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AprendendoEF.BLL
 {
-    public class GrupoProdutoBO : BaseBO<GrupoProduto>
+    public class GrupoProdutoBO : BaseBO<GrupoProduto, GrupoProdutoDAO>
     {
         public override void Salvar(GrupoProduto entidade)
         {

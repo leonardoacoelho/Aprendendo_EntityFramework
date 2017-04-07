@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuNovo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrupoProdutoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +51,7 @@
             this.menuCancelar});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(98, 413);
+            this.menuStrip1.Size = new System.Drawing.Size(85, 413);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,7 +62,7 @@
             this.menuNovo.Image = global::AprendendoEF.UI.Properties.Resources.add;
             this.menuNovo.Name = "menuNovo";
             this.menuNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuNovo.Size = new System.Drawing.Size(85, 23);
+            this.menuNovo.Size = new System.Drawing.Size(72, 23);
             this.menuNovo.Text = "NOVO";
             this.menuNovo.Click += new System.EventHandler(this.menuNovo_Click);
             // 
@@ -67,7 +70,7 @@
             // 
             this.menuCancelar.Name = "menuCancelar";
             this.menuCancelar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.menuCancelar.Size = new System.Drawing.Size(85, 19);
+            this.menuCancelar.Size = new System.Drawing.Size(72, 19);
             this.menuCancelar.Text = "Cancelar";
             this.menuCancelar.Visible = false;
             this.menuCancelar.Click += new System.EventHandler(this.menuCancelar_Click);
@@ -85,12 +88,14 @@
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Descricao,
-            this.Valor});
+            this.Grupo,
+            this.Valor,
+            this.GrupoProdutoId});
             this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProdutos.Location = new System.Drawing.Point(98, 0);
+            this.dgvProdutos.Location = new System.Drawing.Point(85, 0);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.Size = new System.Drawing.Size(701, 413);
+            this.dgvProdutos.Size = new System.Drawing.Size(714, 413);
             this.dgvProdutos.TabIndex = 1;
             this.dgvProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellDoubleClick);
             // 
@@ -108,12 +113,30 @@
             this.Descricao.Name = "Descricao";
             this.Descricao.ReadOnly = true;
             // 
+            // Grupo
+            // 
+            this.Grupo.DataPropertyName = "GrupoProduto";
+            this.Grupo.HeaderText = "Grupo do Produto";
+            this.Grupo.Name = "Grupo";
+            this.Grupo.ReadOnly = true;
+            // 
             // Valor
             // 
             this.Valor.DataPropertyName = "Valor";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle2;
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
+            // 
+            // GrupoProdutoId
+            // 
+            this.GrupoProdutoId.DataPropertyName = "GrupoProduto_Id";
+            this.GrupoProdutoId.HeaderText = "Grupo Produto";
+            this.GrupoProdutoId.Name = "GrupoProdutoId";
+            this.GrupoProdutoId.ReadOnly = true;
+            this.GrupoProdutoId.Visible = false;
             // 
             // ListaProdutosForm
             // 
@@ -142,9 +165,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuNovo;
         private System.Windows.Forms.DataGridView dgvProdutos;
+        private System.Windows.Forms.ToolStripMenuItem menuCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.ToolStripMenuItem menuCancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GrupoProdutoId;
     }
 }

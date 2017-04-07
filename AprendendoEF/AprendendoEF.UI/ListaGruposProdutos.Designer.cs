@@ -48,7 +48,7 @@
             this.cancelarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(85, 384);
+            this.menuStrip1.Size = new System.Drawing.Size(98, 384);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,7 +59,7 @@
             this.menuNovo.Image = global::AprendendoEF.UI.Properties.Resources.add;
             this.menuNovo.Name = "menuNovo";
             this.menuNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuNovo.Size = new System.Drawing.Size(72, 23);
+            this.menuNovo.Size = new System.Drawing.Size(85, 23);
             this.menuNovo.Text = "NOVO";
             this.menuNovo.Click += new System.EventHandler(this.menuNovo_Click);
             // 
@@ -67,7 +67,7 @@
             // 
             this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
             this.cancelarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(72, 19);
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(85, 19);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             this.cancelarToolStripMenuItem.Visible = false;
             this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
@@ -94,11 +94,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvGruposProd.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGruposProd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGruposProd.Location = new System.Drawing.Point(85, 0);
+            this.dgvGruposProd.Location = new System.Drawing.Point(98, 0);
             this.dgvGruposProd.Name = "dgvGruposProd";
             this.dgvGruposProd.ReadOnly = true;
             this.dgvGruposProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGruposProd.Size = new System.Drawing.Size(570, 384);
+            this.dgvGruposProd.Size = new System.Drawing.Size(557, 384);
             this.dgvGruposProd.TabIndex = 1;
             this.dgvGruposProd.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGruposProd_CellDoubleClick);
             // 

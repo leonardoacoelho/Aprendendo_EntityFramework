@@ -120,10 +120,9 @@ namespace AprendendoEF.UI
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show($"Você não pode remover {txtNome.Text} porque está atrelado a outros registros", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

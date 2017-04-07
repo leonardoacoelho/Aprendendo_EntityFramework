@@ -152,6 +152,10 @@
       <Project>{9cb0c2fa-215f-44a9-b795-dc46879ed553}</Project>
       <Name>AprendendoEF.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AprendendoEF.DAL\AprendendoEF.DAL.csproj">
+      <Project>{bf46d76f-2367-4933-a51f-96e8dc12c5f9}</Project>
+      <Name>AprendendoEF.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AprendendoEF\AprendendoEF.csproj">
       <Project>{43b2baa1-22b9-41dd-ba8e-dce4895a9fe3}</Project>
       <Name>AprendendoEF</Name>
