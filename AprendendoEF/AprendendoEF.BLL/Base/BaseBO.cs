@@ -5,6 +5,11 @@ using System.Collections.Generic;
 
 namespace AprendendoEF.BLL.Base
 {
+    /// <summary>
+    /// Cria uma instância da classe de logica de negocios conforme o tipo passado em T e acesso a dados conforme o tipo passado em TDAO
+    /// </summary>
+    /// <typeparam name="T">Tipo da ENTIDADE</typeparam>
+    /// <typeparam name="TDAO">Tipo do ACESSO A DADOS (T seguido do sufixo DAO)</typeparam>
     public class BaseBO<T, TDAO> 
         where T : class, IBaseEntidade 
         where TDAO : class, IBaseDAO<T>, new()

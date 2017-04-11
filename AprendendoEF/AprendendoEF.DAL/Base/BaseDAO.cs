@@ -1,15 +1,16 @@
 ﻿using AprendendoEF.DAL.Context;
 using AprendendoEF.DAL.Interfaces;
 using AprendendoEF.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AprendendoEF.DAL.Base
 {
+    /// <summary>
+    /// Cria uma instância da classe de acesso a dados conforme o tipo passado em T
+    /// </summary>
+    /// <typeparam name="T">Tipo da ENTIDADE</typeparam>
     public class BaseDAO<T> : IBaseDAO<T> where T : class, IBaseEntidade
     {
         public virtual List<T> Listar()

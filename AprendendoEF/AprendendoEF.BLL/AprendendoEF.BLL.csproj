@@ -43,8 +43,10 @@
     <Compile Include="Base\BaseBO.cs" />
     <Compile Include="ClienteBO.cs" />
     <Compile Include="GrupoProdutoBO.cs" />
+    <Compile Include="ItemVendaBO.cs" />
     <Compile Include="ProdutoBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VendaBO.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

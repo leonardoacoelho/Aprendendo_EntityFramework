@@ -43,7 +43,7 @@ namespace AprendendoEF.UI
             {
                 txtId.Text = _produto.Id.ToString();
                 txtDescricao.Text = _produto.Descricao;
-                cbxGrupo.SelectedIndex = grupos.IndexOf(grupos.FirstOrDefault(x=>x.Id == _produto.GrupoProduto_Id));
+                cbxGrupo.SelectedIndex = grupos.IndexOf(grupos.FirstOrDefault(x => x.Id == _produto.GrupoProduto_Id));
                 txtValor.Text = _produto.Valor.ToString();
 
                 menuRemover.Visible = true;
@@ -56,6 +56,12 @@ namespace AprendendoEF.UI
         {
             try
             {
+                double valor = 0;
+                double.TryParse(txtValor.Text, out valor);
+
+                if (valor <= 0)
+                    throw new ArgumentOutOfRangeException();
+
                 _produto = new Produto
                 {
                     Id = ObterId(),
@@ -86,8 +92,7 @@ namespace AprendendoEF.UI
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("O campo Valor dve ser maior que zero '0'!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                MessageBox.Show("O campo Valor deve ser maior que zero '0' ou de letras!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

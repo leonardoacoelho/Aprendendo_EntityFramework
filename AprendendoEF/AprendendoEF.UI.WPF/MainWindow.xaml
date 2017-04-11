@@ -1,0 +1,43 @@
+﻿<Window x:Class="AprendendoEF.UI.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AprendendoEF.UI.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="247.842" Width="291" >
+    <Window.Resources>
+        <BitmapImage x:Key="ImageSource1" >C:\Users\Leonardo Abaque\Desktop\asdf.png</BitmapImage>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid Background="#333" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="58,81,0,0" VerticalAlignment="Top" Width="114" Click="button_Click" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Height="100" BorderBrush="#FF56B4D3" Foreground="White" ToolTip="botão" Content="&#xD;&#xA;">
+            <Button.Resources>
+                <SolidColorBrush x:Key="Brush1" Color="#FF97CEFF"/>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="{DynamicResource ImageSource1}"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.484" AngleY="-0.359"/>
+                    <RotateTransform Angle="0.358"/>
+                    <TranslateTransform X="-87.904" Y="-4.09"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+        </Button>
+        <TextBlock x:Name="textBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="42,55,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="69" Width="237"/>
+    </Grid>
+</Window>
