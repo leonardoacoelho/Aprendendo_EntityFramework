@@ -4,7 +4,9 @@ namespace AprendendoEF
 {
     public class ItemVenda : BaseEntidade
     {
-        public virtual Produto Produto { get; set; }
+        public int Item { get; set; }
+
+        public Produto Produto { get; set; }
 
         public int Produto_Id { get; set; }
 
@@ -14,7 +16,7 @@ namespace AprendendoEF
 
         public double ValorTotal { get; set; }
 
-        public virtual Venda Venda { get; set; }
+        public Venda Venda { get; set; }
 
         public int Venda_Id { get; set; }
     }

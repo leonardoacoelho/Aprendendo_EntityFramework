@@ -106,6 +106,10 @@
     <Compile Include="Migrations\201704102009278_Add_Venda.Designer.cs">
       <DependentUpon>201704102009278_Add_Venda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704121932416_Add_Item_to_ItemVenda.cs" />
+    <Compile Include="Migrations\201704121932416_Add_Item_to_ItemVenda.Designer.cs">
+      <DependentUpon>201704121932416_Add_Item_to_ItemVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProdutoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704102009278_Add_Venda.resx">
       <DependentUpon>201704102009278_Add_Venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121932416_Add_Item_to_ItemVenda.resx">
+      <DependentUpon>201704121932416_Add_Item_to_ItemVenda.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

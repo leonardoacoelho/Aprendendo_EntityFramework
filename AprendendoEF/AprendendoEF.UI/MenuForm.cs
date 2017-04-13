@@ -39,5 +39,11 @@ namespace AprendendoEF.UI
             var form = new ListaGruposProdutos(this);
             form.Show();
         }
+
+        private void menuVenda_Click(object sender, EventArgs e)
+        {
+            var form = new ListaVendasForm(this);
+            form.Show();
+        }
     }
 }

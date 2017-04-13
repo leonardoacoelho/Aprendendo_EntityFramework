@@ -10,10 +10,25 @@ namespace AprendendoEF.BLL
         {
             try
             {
-                if (entidade.Produto_Id <= 0 || entidade.Quantidade <= 0 || entidade.ValorUnitario <= 0)
-                    throw new ArgumentOutOfRangeException();
+                Validar(entidade);
+
+                entidade.Produto = null;
 
                 base.Salvar(entidade);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void Validar(ItemVenda entidade)
+        {
+            try
+            {
+                if (entidade.Produto_Id <= 0 || entidade.Quantidade <= 0 || entidade.ValorUnitario <= 0)
+                    throw new ArgumentOutOfRangeException();
             }
             catch (Exception)
             {

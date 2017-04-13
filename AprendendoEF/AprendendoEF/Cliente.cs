@@ -14,5 +14,10 @@ namespace AprendendoEF
         public string Sobrenome { get; set; }
 
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nome} {Sobrenome}";
+        }
     }
 }

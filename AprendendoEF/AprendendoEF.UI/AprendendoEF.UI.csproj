@@ -76,6 +76,12 @@
     <Compile Include="CadastroProdutoForm.Designer.cs">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItensVendaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItensVendaForm.Designer.cs">
+      <DependentUpon>ItensVendaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaClientesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     <Compile Include="ListaProdutosForm.Designer.cs">
       <DependentUpon>ListaProdutosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaVendasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaVendasForm.Designer.cs">
+      <DependentUpon>ListaVendasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VendaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendaForm.Designer.cs">
+      <DependentUpon>VendaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadastroClientesForm.resx">
       <DependentUpon>CadastroClientesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroProdutoForm.resx">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItensVendaForm.resx">
+      <DependentUpon>ItensVendaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaClientesForm.resx">
       <DependentUpon>ListaClientesForm.cs</DependentUpon>
@@ -120,19 +146,20 @@
     <EmbeddedResource Include="ListaProdutosForm.resx">
       <DependentUpon>ListaProdutosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaVendasForm.resx">
+      <DependentUpon>ListaVendasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="VendaForm.resx">
+      <DependentUpon>VendaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,7 +200,18 @@
   <ItemGroup>
     <None Include="Resources\delete.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

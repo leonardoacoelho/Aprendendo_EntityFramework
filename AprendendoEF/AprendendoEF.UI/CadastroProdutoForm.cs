@@ -120,7 +120,6 @@ namespace AprendendoEF.UI
 
         private void menuRemover_Click(object sender, EventArgs e)
         {
-
             try
             {
                 var id = ObterId();
@@ -146,7 +145,6 @@ namespace AprendendoEF.UI
 
                 throw;
             }
-
         }
 
     }

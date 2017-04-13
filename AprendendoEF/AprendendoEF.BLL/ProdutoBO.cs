@@ -22,11 +22,10 @@ namespace AprendendoEF.BLL
 
                 //Ajustar foreignkey
                 entidade.GrupoProduto_Id = entidade.GrupoProduto.Id;
-                entidade.GrupoProduto = null;
 
                 base.Salvar(entidade);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

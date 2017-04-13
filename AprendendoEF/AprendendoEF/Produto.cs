@@ -11,5 +11,10 @@ namespace AprendendoEF
         public GrupoProduto GrupoProduto { get; set; }
 
         public int GrupoProduto_Id { get; set; }
+
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }
