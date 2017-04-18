@@ -1,5 +1,6 @@
 ﻿using AprendendoEF.BLL;
 using AprendendoEF.UI.Base;
+using AprendendoEF.UI.Reports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -145,6 +146,8 @@ namespace AprendendoEF.UI
 
                 MessageBox.Show("Salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                var form = new EspelhoVendaForm(_venda.Id); 
+
                 if (string.IsNullOrEmpty(txtId.Text))
                 {
                     LimparCampos();
@@ -156,6 +159,8 @@ namespace AprendendoEF.UI
                     Hide();
                     _lista.AtualizarGrid();
                 }
+
+                form.Show();
             }
             catch (Exception ex)
             {

@@ -40,6 +40,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuNova = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRelatorio = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +125,8 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuNova,
-            this.menuSair});
+            this.menuSair,
+            this.menuRelatorio});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(134, 403);
@@ -150,6 +152,17 @@
             this.menuSair.Text = "sair";
             this.menuSair.Visible = false;
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
+            // 
+            // menuRelatorio
+            // 
+            this.menuRelatorio.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.menuRelatorio.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.menuRelatorio.Image = global::AprendendoEF.UI.Properties.Resources.text;
+            this.menuRelatorio.Name = "menuRelatorio";
+            this.menuRelatorio.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.menuRelatorio.Size = new System.Drawing.Size(121, 23);
+            this.menuRelatorio.Text = "RELATORIO";
+            this.menuRelatorio.Click += new System.EventHandler(this.menuRelatorio_Click);
             // 
             // ListaVendasForm
             // 
@@ -183,5 +196,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente_Id;
+        private System.Windows.Forms.ToolStripMenuItem menuRelatorio;
     }
 }

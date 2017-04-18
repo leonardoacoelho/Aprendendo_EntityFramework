@@ -1,5 +1,6 @@
 ﻿using AprendendoEF.BLL;
 using AprendendoEF.UI.Base;
+using AprendendoEF.UI.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,6 +69,12 @@ namespace AprendendoEF.UI
                     throw;
                 }
             }
+        }
+
+        private void menuRelatorio_Click(object sender, EventArgs e)
+        {
+            var form = new RelatorioVendasForm();
+            form.Show();
         }
     }
 }
