@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AprendendoEF.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,12 @@ namespace AprendendoEF.UI
         private void menuVenda_Click(object sender, EventArgs e)
         {
             var form = new ListaVendasForm(this);
+            form.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new ListaUsuariosForm(this);
             form.Show();
         }
     }

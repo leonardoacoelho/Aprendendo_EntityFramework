@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVenda = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVenda = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,18 +52,26 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // clientesToolStripMenuItem
+            // menuVenda
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuClientes,
-            this.menuProdutos,
-            this.gruposDeProdutosToolStripMenuItem});
-            this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.clientesToolStripMenuItem.Image = global::AprendendoEF.UI.Properties.Resources.cadastro;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(103, 23);
-            this.clientesToolStripMenuItem.Text = "&Cadastros";
+            this.menuVenda.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.menuVenda.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.menuVenda.Image = global::AprendendoEF.UI.Properties.Resources.venda;
+            this.menuVenda.Name = "menuVenda";
+            this.menuVenda.Size = new System.Drawing.Size(78, 23);
+            this.menuVenda.Text = "&Venda";
+            this.menuVenda.Click += new System.EventHandler(this.menuVenda_Click);
+            // 
+            // menuSair
+            // 
+            this.menuSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuSair.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.menuSair.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.menuSair.Name = "menuSair";
+            this.menuSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
+            this.menuSair.Size = new System.Drawing.Size(47, 23);
+            this.menuSair.Text = "Sair";
+            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // menuClientes
             // 
@@ -89,26 +98,27 @@
             this.gruposDeProdutosToolStripMenuItem.Text = "&Grupos de Produtos";
             this.gruposDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.gruposDeProdutosToolStripMenuItem_Click);
             // 
-            // menuSair
+            // usuariosToolStripMenuItem
             // 
-            this.menuSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuSair.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.menuSair.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.menuSair.Name = "menuSair";
-            this.menuSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.menuSair.Size = new System.Drawing.Size(47, 23);
-            this.menuSair.Text = "Sair";
-            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.usuariosToolStripMenuItem.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // menuVenda
+            // clientesToolStripMenuItem
             // 
-            this.menuVenda.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.menuVenda.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.menuVenda.Image = global::AprendendoEF.UI.Properties.Resources.venda;
-            this.menuVenda.Name = "menuVenda";
-            this.menuVenda.Size = new System.Drawing.Size(78, 23);
-            this.menuVenda.Text = "&Venda";
-            this.menuVenda.Click += new System.EventHandler(this.menuVenda_Click);
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuClientes,
+            this.menuProdutos,
+            this.gruposDeProdutosToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
+            this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.clientesToolStripMenuItem.Image = global::AprendendoEF.UI.Properties.Resources.cadastro;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(103, 23);
+            this.clientesToolStripMenuItem.Text = "&Cadastros";
             // 
             // MenuForm
             // 
@@ -134,9 +144,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
-        private System.Windows.Forms.ToolStripMenuItem menuSair;
         private System.Windows.Forms.ToolStripMenuItem menuProdutos;
         private System.Windows.Forms.ToolStripMenuItem gruposDeProdutosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuSair;
         private System.Windows.Forms.ToolStripMenuItem menuVenda;
     }
 }

@@ -83,6 +83,16 @@ namespace AprendendoEF.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_stop_exit_1583 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_stop_exit_1583", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check {
             get {
                 object obj = ResourceManager.GetObject("check", resourceCulture);
@@ -96,6 +106,16 @@ namespace AprendendoEF.UI.Properties {
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door {
+            get {
+                object obj = ResourceManager.GetObject("door", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

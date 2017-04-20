@@ -79,6 +79,12 @@
     <Compile Include="CadastroProdutoForm.Designer.cs">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroUsuariosForm.Designer.cs">
+      <DependentUpon>CadastroUsuariosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItensVendaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +109,23 @@
     <Compile Include="ListaProdutosForm.Designer.cs">
       <DependentUpon>ListaProdutosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaUsuariosForm.Designer.cs">
+      <DependentUpon>ListaUsuariosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaVendasForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaVendasForm.Designer.cs">
       <DependentUpon>ListaVendasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
@@ -152,6 +170,9 @@
     <EmbeddedResource Include="CadastroProdutoForm.resx">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroUsuariosForm.resx">
+      <DependentUpon>CadastroUsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItensVendaForm.resx">
       <DependentUpon>ItensVendaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,8 +185,14 @@
     <EmbeddedResource Include="ListaProdutosForm.resx">
       <DependentUpon>ListaProdutosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaUsuariosForm.resx">
+      <DependentUpon>ListaUsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaVendasForm.resx">
       <DependentUpon>ListaVendasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -210,6 +237,10 @@
       <Project>{bf46d76f-2367-4933-a51f-96e8dc12c5f9}</Project>
       <Name>AprendendoEF.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AprendendoEF.Exceptions\AprendendoEF.Exceptions.csproj">
+      <Project>{29EBAE32-46FD-40DD-B317-9738CDD309E9}</Project>
+      <Name>AprendendoEF.Exceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AprendendoEF\AprendendoEF.csproj">
       <Project>{43b2baa1-22b9-41dd-ba8e-dce4895a9fe3}</Project>
       <Name>AprendendoEF</Name>
@@ -241,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_stop_exit_1583.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

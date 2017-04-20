@@ -19,6 +19,7 @@ namespace AprendendoEF.DAL.Context
             modelBuilder.Configurations.Add(new GrupoProdutoConfig());
             modelBuilder.Configurations.Add(new ItemVendaConfig());
             modelBuilder.Configurations.Add(new VendaConfig());
+            modelBuilder.Configurations.Add(new UsuarioConfig());
         }
 
         public virtual DbSet<Cliente> Clientes { get; set; }
@@ -26,6 +27,7 @@ namespace AprendendoEF.DAL.Context
         public virtual DbSet<GrupoProduto> GruposProdutos { get; set; }
         public virtual DbSet<Venda> Vendas { get; set;}
         public virtual DbSet<ItemVenda> ItensVendas { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
 
     }
 }
