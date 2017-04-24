@@ -98,7 +98,6 @@ namespace AprendendoEF.UI
                 {
                     Id = id,
                     Item = Convert.ToInt32(txtItem.Text),
-                    Produto = selectedProduto,
                     Produto_Id = selectedProduto.Id,
                     Quantidade = quant,
                     ValorUnitario = valUnit,

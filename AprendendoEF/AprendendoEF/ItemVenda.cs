@@ -6,7 +6,7 @@ namespace AprendendoEF
     {
         public int Item { get; set; }
 
-        public Produto Produto { get; set; }
+        public Produto Produto { get; private set; }
 
         public int Produto_Id { get; set; }
 
@@ -16,7 +16,7 @@ namespace AprendendoEF
 
         public double ValorTotal { get; set; }
 
-        public Venda Venda { get; set; }
+        public Venda Venda { get; private set; }
 
         public int Venda_Id { get; set; }
     }

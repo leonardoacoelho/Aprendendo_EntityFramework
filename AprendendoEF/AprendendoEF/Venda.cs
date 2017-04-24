@@ -6,7 +6,7 @@ namespace AprendendoEF
 {
     public class Venda : BaseEntidade
     {
-        public Cliente Cliente { get; set; }
+        public Cliente Cliente { get; private set; }
 
         public int Cliente_Id { get; set; }
 

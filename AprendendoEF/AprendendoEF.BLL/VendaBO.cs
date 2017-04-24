@@ -19,7 +19,6 @@ namespace AprendendoEF.BLL
                     throw new ArgumentNullException();
                 else
                 {
-                    entidade.Cliente = null;
                     base.Salvar(entidade);
                 }
             }

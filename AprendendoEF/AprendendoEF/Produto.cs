@@ -8,7 +8,7 @@ namespace AprendendoEF
 
         public double Valor { get; set; }
 
-        public GrupoProduto GrupoProduto { get; set; }
+        public GrupoProduto GrupoProduto { get; private set; }
 
         public int GrupoProduto_Id { get; set; }
 

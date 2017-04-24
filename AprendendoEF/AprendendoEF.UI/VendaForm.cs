@@ -138,7 +138,6 @@ namespace AprendendoEF.UI
                 var cliente = (Cliente)cbxCliente.SelectedItem;
 
                 _venda.Id = ObterId();
-                _venda.Cliente = cliente;
                 _venda.Cliente_Id = cliente.Id;
                 _venda.Data = dtpData.Value;
                 _venda.Valor = GetValor();

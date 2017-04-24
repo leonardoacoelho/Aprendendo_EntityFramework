@@ -28,7 +28,6 @@ namespace AprendendoEF.DAL
         {
             using (var context = new DataContext())
             {
-                context.GruposProdutos.Attach(entidade.GrupoProduto);
                 context.Produtos.Add(entidade);
                 context.SaveChanges();
             }

@@ -66,7 +66,7 @@ namespace AprendendoEF.UI
                 {
                     Id = ObterId(),
                     Descricao = txtDescricao.Text,
-                    GrupoProduto = (GrupoProduto)cbxGrupo.SelectedItem,
+                    GrupoProduto_Id = ((GrupoProduto)cbxGrupo.SelectedItem).Id,
                     Valor = Convert.ToDouble(txtValor.Text)
                 };
 

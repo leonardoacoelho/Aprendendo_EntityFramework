@@ -12,8 +12,6 @@ namespace AprendendoEF.BLL
             {
                 Validar(entidade);
 
-                entidade.Produto = null;
-
                 base.Salvar(entidade);
             }
             catch (Exception)

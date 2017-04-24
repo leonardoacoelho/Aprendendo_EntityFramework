@@ -20,12 +20,9 @@ namespace AprendendoEF.BLL
                 if (entidade.Valor <= 0)
                     throw new ArgumentOutOfRangeException();
 
-                //Ajustar foreignkey
-                entidade.GrupoProduto_Id = entidade.GrupoProduto.Id;
-
                 base.Salvar(entidade);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
